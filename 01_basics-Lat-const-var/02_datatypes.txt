@@ -1,0 +1,316 @@
+Data Types in JavaScript
+
+JavaScript has a dynamic typing system, meaning variables can hold different types of data and you don’t need to declare the data type explicitly. JavaScript data types are broadly divided into primitive types and object types.
+
+1. Primitive Data Types
+
+Primitive data types are simple values and are immutable (cannot be changed). These are the most basic types in JavaScript, and they include:
+	•	Number:
+	•	Represents numeric values (both integers and floating-point numbers).
+	•	Examples:
+
+let age = 25;
+let price = 19.99;
+let distance = 3.14;
+
+
+	•	Special Numbers:
+	•	NaN (Not a Number): Represents a value that is not a legal number.
+	•	Infinity and -Infinity: Represents positive and negative infinity, respectively.
+	•	Arithmetic operations involving numbers return a number type.
+
+	•	String:
+	•	Represents a sequence of characters (text).
+	•	Can be defined using single quotes ('), double quotes ("), or backticks (`).
+	•	Examples:
+
+let name = "Alice";
+let greeting = 'Hello, world!';
+let message = `Welcome to JavaScript!`;
+
+
+	•	You can use string methods like .length, .toUpperCase(), .toLowerCase(), .substring(), etc.
+
+	•	Boolean:
+	•	Represents one of two values: true or false.
+	•	Often used in conditions and loops to determine the flow of the program.
+	•	Example:
+
+let isActive = true;
+let isLoggedIn = false;
+
+
+	•	Undefined:
+	•	Represents a variable that has been declared but has not been assigned a value.
+	•	A variable automatically has the value undefined when declared but not initialized.
+	•	Example:
+
+let x;
+console.log(x); // undefined
+
+
+	•	Null:
+	•	Represents the intentional absence of any value or object.
+	•	null is a special value that is explicitly assigned to a variable.
+	•	Example:
+
+let user = null; // No user is assigned yet
+
+
+	•	Symbol (Introduced in ES6):
+	•	Represents a unique and immutable value.
+	•	Useful for creating unique identifiers for object properties.
+	•	Example:
+
+const sym = Symbol('description');
+
+
+	•	BigInt (Introduced in ES11):
+	•	A data type that can represent numbers larger than Number.MAX_SAFE_INTEGER.
+	•	Useful for working with arbitrarily large integers.
+	•	Example:
+
+let bigNumber = BigInt(1234567890123456789012345678901234567890);
+
+2. Object Data Types
+
+Objects are collections of key-value pairs and are more complex than primitive types. They are mutable, meaning you can change their properties.
+	•	Object:
+	•	Used to store collections of data and more complex entities.
+	•	An object is defined using curly braces {} and consists of key-value pairs.
+	•	Example:
+
+let person = {
+  name: "John",
+  age: 30,
+  isStudent: false
+};
+
+
+	•	Array:
+	•	A special type of object that stores ordered collections of data.
+	•	Arrays can hold elements of any type, and the elements are indexed (starting from 0).
+	•	Defined using square brackets [].
+	•	Example:
+
+let fruits = ["apple", "banana", "cherry"];
+console.log(fruits[0]); // "apple"
+
+
+	•	Arrays have a variety of built-in methods, such as .push(), .pop(), .shift(), .unshift(), .map(), etc.
+
+	•	Function:
+	•	Functions are also objects in JavaScript.
+	•	They are blocks of code designed to perform a task or calculate a value.
+	•	Functions are often used as values stored in variables or passed as arguments.
+	•	Example:
+
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // "Hello, Alice!"
+
+
+	•	Date:
+	•	Represents date and time in JavaScript.
+	•	Can be created using the Date constructor.
+	•	Example:
+
+let today = new Date();
+console.log(today); // Current date and time
+
+
+	•	RegExp (Regular Expression):
+	•	Used for pattern matching within strings (e.g., validating email addresses, phone numbers, etc.).
+	•	Example:
+
+let pattern = /abc/;
+let text = "abcdef";
+console.log(pattern.test(text)); // true
+
+3. Type Conversion
+
+JavaScript allows automatic and manual conversion between different data types.
+	•	Implicit Type Conversion (Type Coercion):
+JavaScript automatically converts one type to another in certain situations, like when performing arithmetic or string concatenation.
+	•	Example:
+
+let x = 5; // Number
+let y = "10"; // String
+console.log(x + y); // "510" (x is coerced to a string)
+
+
+	•	Explicit Type Conversion:
+You can explicitly convert between types using built-in functions:
+	•	String to Number: Number("10") → 10
+	•	Number to String: String(10) → "10"
+	•	String to Boolean: Boolean("") → false
+	•	Number to Boolean: Boolean(0) → false
+	•	Type Checking:
+To check the type of a variable, you can use the typeof operator.
+	•	Example:
+
+let x = 5;
+console.log(typeof x); // "number"
+let name = "Alice";
+console.log(typeof name); // "string"
+
+Summary of Data Types:
+	1.	Primitive Types:
+	•	Number: Represents numerical values (e.g., 10, 3.14).
+	•	String: Represents text (e.g., “Hello”).
+	•	Boolean: Represents true or false.
+	•	Undefined: Represents an uninitialized variable.
+	•	Null: Represents the intentional absence of any value.
+	•	Symbol: Represents a unique value, mainly used as object property identifiers.
+	•	BigInt: Represents integers beyond the safe integer range.
+	2.	Object Types:
+	•	Object: A collection of key-value pairs.
+	•	Array: An ordered collection of data.
+	•	Function: A block of code that performs a specific task.
+	•	Date: Represents date and time.
+	•	RegExp: A regular expression for pattern matching.
+
+By understanding and using these data types effectively, you can store and manipulate different kinds of data in your JavaScript programs.
+
+
+
+
+
+--------------Question ---------------
+
+Here are 10 questions covering various aspects of JavaScript data types and related programs:
+
+Questions on Data Types:
+	1.	What will be the output of the following code?
+
+let num = 10;
+let str = "20";
+console.log(num + str);
+
+	•	a) 30
+	•	b) 1020
+	•	c) NaN
+	•	d) undefined
+
+	2.	Which of the following is the correct way to declare a number variable in JavaScript?
+	•	a) let x = 10;
+	•	b) let x = "10";
+	•	c) let x = true;
+	•	d) let x = 10.5.0;
+	3.	What is the output of the following code?
+
+let value = "Hello";
+console.log(typeof value);
+
+	•	a) string
+	•	b) object
+	•	c) undefined
+	•	d) number
+
+	4.	What will be the result of the following expression?
+
+let x = null;
+let y = undefined;
+console.log(x == y);
+
+	•	a) true
+	•	b) false
+	•	c) undefined
+	•	d) null
+
+	5.	Which data type is returned by the typeof operator when applied to a function in JavaScript?
+	•	a) function
+	•	b) object
+	•	c) undefined
+	•	d) symbol
+	6.	What will be the output of the following code?
+
+let bigNum = BigInt(123456789012345678901234567890);
+console.log(bigNum + 1n);
+
+	•	a) 123456789012345678901234567891
+	•	b) 1234567890123456789012345678901
+	•	c) NaN
+	•	d) undefined
+
+	7.	Which of the following is true about JavaScript’s null value?
+	•	a) It is an object.
+	•	b) It is a primitive value.
+	•	c) It can be assigned to any variable.
+	•	d) It represents a variable that has not been declared.
+	8.	What is the output of the following code?
+
+let arr = [1, 2, 3];
+arr[10] = 5;
+console.log(arr.length);
+
+	•	a) 3
+	•	b) 5
+	•	c) 6
+	•	d) 11
+
+	9.	What will be the result of this comparison?
+
+let obj1 = {name: "John"};
+let obj2 = {name: "John"};
+console.log(obj1 == obj2);
+
+	•	a) true
+	•	b) false
+	•	c) undefined
+	•	d) NaN
+
+	10.	Which of the following is an example of a valid string in JavaScript?
+	•	a) "Hello"
+	•	b) '1234'
+	•	c) `Template string`
+	•	d) All of the above
+
+Sample Programs to Test Data Types:
+	1.	Program to check if a variable is a number:
+
+let value = 10;
+if (typeof value === "number") {
+  console.log("It is a number");
+} else {
+  console.log("It is not a number");
+}
+
+
+	2.	Program to check if a variable is an array:
+
+let value = [1, 2, 3];
+if (Array.isArray(value)) {
+  console.log("It is an array");
+} else {
+  console.log("It is not an array");
+}
+
+
+	3.	Program to convert a string to a number and perform an operation:
+
+let str = "25";
+let num = Number(str);
+console.log(num + 5); // Output: 30
+
+
+	4.	Program to check if a variable is null or undefined:
+
+let variable = null;
+if (variable === null) {
+  console.log("Variable is null");
+} else if (variable === undefined) {
+  console.log("Variable is undefined");
+} else {
+  console.log("Variable has a value");
+}
+
+
+	5.	Program to demonstrate object equality:
+
+let obj1 = { name: "Alice" };
+let obj2 = { name: "Alice" };
+console.log(obj1 == obj2); // Output: false (objects are reference types)
+
+These questions and programs will test your knowledge of JavaScript data types, type conversion, object handling, and basic operations on variables.
