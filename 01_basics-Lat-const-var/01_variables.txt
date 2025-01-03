@@ -1,0 +1,158 @@
+//----------------------------------------------------
+
+// 5 questions on JavaScript variables,  different types of variables:
+
+//----------------------------------------------------
+
+// -----------Questions:---------
+
+// 	1.	Which of the following are valid ways to declare a variable in JavaScript?
+// 	•	a) var name = "vishv";
+// 	•	b) let age = 24;
+// 	•	c) const country = "India";
+// 	•	d) All of the above
+
+// 	2.	What is the difference between var, let, and const in JavaScript?
+// 	•	a) var is function-scoped, while let and const are block-scoped.
+// 	•	b) const allows variable reassignment, while let and var do not.
+// 	•	c) There is no difference between them.
+// 	•	d) let is used for constants, while const is for variables that change.
+
+// 	3.	Which of the following statements is correct regarding JavaScript variables?
+// 	•	a) Variables declared with const can be reassigned.
+// 	•	b) Variables declared with let have function scope.
+// 	•	c) Variables declared with var are block-scoped.
+// 	•	d) Variables declared with let are block-scoped.
+
+// 	4.	What will the following code output?
+// var x = 10;
+// let y = 20;
+// const z = 30;
+// console.log(x, y, z);
+//----------Answer-------------
+// 	•	a) 10 20 30
+// 	•	b) undefined undefined undefined
+// 	•	c) 10 20 30 undefined
+// 	•	d) 10 20 30 30
+
+// 	5.	What happens if you try to reassign a value to a constant variable in JavaScript?
+// 	•	a) The program will throw an error.
+// 	•	b) The program will run normally.
+// 	•	c) The variable will be reset to the default value.
+// 	•	d) The variable will lose its constant value.
+
+
+// -------Key Points to Learn About Variables in JavaScript:-----
+
+Here’s a detailed explanation of variables in JavaScript, including key points and theory to help you understand them thoroughly:
+
+1. What is a Variable in JavaScript?
+
+A variable in JavaScript is a container for storing data values. Variables are used to store values that can be referenced and manipulated in a program. They can store different types of data such as numbers, strings, arrays, objects, and more.
+
+2. Declaring Variables
+
+In JavaScript, there are three primary ways to declare variables:
+	•	var (traditional way)
+	•	let (introduced in ES6)
+	•	const (also introduced in ES6)
+
+3. Types of Variable Declarations
+	•	var:
+	•	Scope: Function-scoped (the variable is available within the function where it’s declared, or globally if declared outside any function).
+	•	Hoisting: Variables declared with var are hoisted, meaning they are moved to the top of their scope during the execution of the code.
+	•	Re-declaration: Can be redeclared within the same scope without error.
+	•	Example:
+
+var x = 10;
+var x = 20; // No error, x will be 20
+
+
+	•	let:
+	•	Scope: Block-scoped (the variable is only available within the block it’s declared in, such as inside a function, loop, or conditional).
+	•	Hoisting: Variables declared with let are hoisted but not initialized until the line of declaration is executed (known as the “temporal dead zone”).
+	•	Re-declaration: Cannot be redeclared within the same scope.
+	•	Example:
+
+let y = 15;
+let y = 25; // Error: Cannot redeclare block-scoped variable 'y'
+
+
+	•	const:
+	•	Scope: Block-scoped, just like let.
+	•	Hoisting: Variables declared with const are hoisted but cannot be accessed before declaration (temporal dead zone).
+	•	Re-declaration: Cannot be redeclared within the same scope.
+	•	Assignment: A const variable cannot be reassigned after its initial assignment.
+	•	Example:
+
+const z = 30;
+z = 40; // Error: Assignment to constant variable.
+
+
+
+4. Variable Scope
+	•	Global Scope: A variable declared outside any function or block is a global variable. It can be accessed anywhere in the program.
+	•	Function Scope: A variable declared within a function using var is local to that function and cannot be accessed outside of it.
+	•	Block Scope: Variables declared inside a block (like if or for statements) using let or const are confined to that block and cannot be accessed outside it.
+
+5. Hoisting
+	•	Hoisting is JavaScript’s behavior of moving declarations (but not initializations) to the top of their scope during the execution phase.
+	•	var: The declaration is hoisted to the top, but the initialization stays in place.
+	•	let and const: Only the declarations are hoisted, but the variables remain uninitialized until the code reaches their declaration line.
+	•	Example:
+
+console.log(a); // undefined, because 'var a' is hoisted but not initialized
+var a = 5;
+
+
+
+6. Re-declaring Variables
+	•	var allows variables to be redeclared within the same scope.
+	•	let and const do not allow redeclarations in the same scope. Trying to redeclare will result in an error.
+
+7. Mutability with const
+	•	Objects and Arrays declared with const are mutable, meaning their contents (properties or elements) can be changed.
+	•	However, you cannot reassign a new object or array to a const variable.
+	•	Example:
+
+const obj = { name: "Alice" };
+obj.name = "Bob"; // Valid: object can be mutated
+obj = { name: "Charlie" }; // Error: Cannot assign to 'obj' because it is a constant.
+
+
+
+8. Default Value Assignment
+	•	If you declare a variable without initializing it, JavaScript assigns it the value undefined by default.
+	•	Example:
+
+let x;
+console.log(x); // undefined
+
+
+
+9. Variable Types
+
+JavaScript variables can hold different types of data. Here are some common types:
+	•	Primitive Types:
+	•	Number: Represents numeric values (e.g., 10, 3.14).
+	•	String: Represents a sequence of characters (e.g., "Hello", 'World').
+	•	Boolean: Represents true/false values.
+	•	Undefined: Represents a variable that has been declared but not initialized.
+	•	Null: Represents the intentional absence of any value.
+	•	Symbol: Represents a unique and immutable value.
+	•	Object Types:
+	•	Object: A collection of key-value pairs.
+	•	Array: A list-like object used to store ordered collections of values.
+
+10. Best Practices for Using Variables
+	•	Use let and const instead of var for better scoping and to avoid hoisting-related issues.
+	•	Always use const by default, and use let only when you need to reassign a value.
+	•	Give descriptive names to variables, which makes your code more readable.
+	•	Avoid global variables to reduce the risk of accidental changes to values.
+	•	Initialize variables at the point of declaration whenever possible to avoid confusion.
+
+Summary:
+	•	var is function-scoped, can be redeclared, and is hoisted.
+	•	let is block-scoped, cannot be redeclared, and is hoisted but uninitialized until the declaration line.
+	•	const is block-scoped, cannot be reassigned or redeclared, and is hoisted but also uninitialized.
+
