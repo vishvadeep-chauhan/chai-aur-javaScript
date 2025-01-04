@@ -4,13 +4,18 @@ var accountPassword = "12345"
 accountCity = "Noida"
 let accountState ;
 
-// accountId = 2
+//accountd = 2
 
-console.log(accountId);
+//console.log(accountId);
 
 
 console.log(accountId);
 console.table([accountId, accountEmail, accountPassword, accountCity,accountState ]);
 
 
+//console.log(a); // undefined, because 'var a' is hoisted but not initialized
+// const a = 5;
 
+let b;
+b = 12;
+console.log(b);
