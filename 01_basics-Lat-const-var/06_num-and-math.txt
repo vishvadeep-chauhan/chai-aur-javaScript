@@ -1,0 +1,215 @@
+
+### JavaScript Math and Number Methods with Examples
+
+---
+### **Math Methods in JavaScript**
+
+1. **`Math.abs(x)`**
+   Returns the absolute value of `x`.
+   ```javascript
+   Math.abs(-5); // 5
+   ```
+
+2. **`Math.acos(x)`**
+   Returns the arccosine (inverse cosine) of `x` in radians.
+   ```javascript
+   Math.acos(1); // 0
+   ```
+
+3. **`Math.asin(x)`**
+   Returns the arcsine (inverse sine) of `x` in radians.
+   ```javascript
+   Math.asin(1); // 1.5707963267948966
+   ```
+
+4. **`Math.atan(x)`**
+   Returns the arctangent (inverse tangent) of `x` in radians.
+   ```javascript
+   Math.atan(1); // 0.7853981633974483
+   ```
+
+5. **`Math.atan2(y, x)`**
+   Returns the arctangent of the quotient `y / x`, in radians.
+   ```javascript
+   Math.atan2(1, 1); // 0.7853981633974483
+   ```
+
+6. **`Math.ceil(x)`**
+   Returns the smallest integer greater than or equal to `x`.
+   ```javascript
+   Math.ceil(4.2); // 5
+   ```
+
+7. **`Math.cos(x)`**
+   Returns the cosine of `x` (in radians).
+   ```javascript
+   Math.cos(Math.PI); // -1
+   ```
+
+8. **`Math.exp(x)`**
+   Returns `e^x` (Euler's number raised to the power of `x`).
+   ```javascript
+   Math.exp(2); // 7.3890560989306495
+   ```
+
+9. **`Math.floor(x)`**
+   Returns the largest integer less than or equal to `x`.
+   ```javascript
+   Math.floor(4.7); // 4
+   ```
+
+10. **`Math.log(x)`**
+    Returns the natural logarithm (base `e`) of `x`.
+    ```javascript
+    Math.log(10); // 2.302585092994046
+    ```
+
+11. **`Math.max(a, b, ...)`**
+    Returns the largest of the zero or more numbers given as input.
+    ```javascript
+    Math.max(1, 2, 3); // 3
+    ```
+
+12. **`Math.min(a, b, ...)`**
+    Returns the smallest of the zero or more numbers given as input.
+    ```javascript
+    Math.min(1, 2, 3); // 1
+    ```
+
+13. **`Math.pow(x, y)`**
+    Returns `x` raised to the power of `y`.
+    ```javascript
+    Math.pow(2, 3); // 8
+    ```
+
+14. **`Math.random()`**
+    Returns a pseudo-random number between `0` (inclusive) and `1` (exclusive).
+    ```javascript
+    Math.random(); // e.g., 0.524356
+    ```
+
+15. **`Math.round(x)`**
+    Rounds `x` to the nearest integer.
+    ```javascript
+    Math.round(4.5); // 5
+    ```
+
+16. **`Math.sin(x)`**
+    Returns the sine of `x` (in radians).
+    ```javascript
+    Math.sin(Math.PI / 2); // 1
+    ```
+
+17. **`Math.sqrt(x)`**
+    Returns the square root of `x`.
+    ```javascript
+    Math.sqrt(16); // 4
+    ```
+
+18. **`Math.tan(x)`**
+    Returns the tangent of `x` (in radians).
+    ```javascript
+    Math.tan(Math.PI / 4); // 1
+    ```
+
+19. **`Math.trunc(x)`**
+    Returns the integer part of `x` by removing any fractional digits.
+    ```javascript
+    Math.trunc(4.7); // 4
+    ```
+
+20. **`Math.sign(x)`**
+    Returns `-1`, `0`, or `1` depending on whether `x` is negative, zero, or positive.
+    ```javascript
+    Math.sign(-10); // -1
+    ```
+
+21. **`Math.cbrt(x)`**
+    Returns the cube root of `x`.
+    ```javascript
+    Math.cbrt(27); // 3
+    ```
+
+22. **`Math.log10(x)`**
+    Returns the base-10 logarithm of `x`.
+    ```javascript
+    Math.log10(100); // 2
+    ```
+
+23. **`Math.log2(x)`**
+    Returns the base-2 logarithm of `x`.
+    ```javascript
+    Math.log2(8); // 3
+    ```
+
+24. **`Math.hypot(x, y, ...)`**
+    Returns the square root of the sum of squares of its arguments.
+    ```javascript
+    Math.hypot(3, 4); // 5
+    ```
+
+25. **`Math.imul(a, b)`**
+    Returns the result of a 32-bit integer multiplication of two numbers.
+    ```javascript
+    Math.imul(2, 3); // 6
+    ```
+
+---
+### **Number Methods in JavaScript**
+
+1. **`Number.isInteger(value)`**
+   Checks if the value is an integer.
+   ```javascript
+   Number.isInteger(4); // true
+   ```
+
+2. **`Number.isNaN(value)`**
+   Checks if the value is `NaN`.
+   ```javascript
+   Number.isNaN(NaN); // true
+   ```
+
+3. **`Number.isFinite(value)`**
+   Checks if the value is a finite number.
+   ```javascript
+   Number.isFinite(10); // true
+   ```
+
+4. **`Number.isSafeInteger(value)`**
+   Checks if the value is a safe integer (between `-2^53 + 1` and `2^53 - 1`).
+   ```javascript
+   Number.isSafeInteger(9007199254740991); // true
+   ```
+
+5. **`Number.parseInt(value, radix)`**
+   Converts a string to an integer.
+   ```javascript
+   Number.parseInt("123", 10); // 123
+   ```
+
+6. **`Number.parseFloat(value)`**
+   Converts a string to a floating point number.
+   ```javascript
+   Number.parseFloat("3.14"); // 3.14
+   ```
+
+7. **`Number.toFixed(digits)`**
+   Formats a number to a fixed number of decimal places.
+   ```javascript
+   (3.14159).toFixed(2); // '3.14'
+   ```
+
+8. **`Number.toPrecision(precision)`**
+   Formats a number to a specific precision.
+   ```javascript
+   (3.14159).toPrecision(3); // '3.14'
+   ```
+
+9. **`Number.toString(radix)`**
+   Converts a number to a string.
+   ```javascript
+   (255).toString(16); // 'ff'
+   ```
+
+---
+This list includes all essential Math and Number methods in JavaScript, explained briefly with examples.
