@@ -24,3 +24,8 @@ let myobj = {
 
 console.log(typeof bigNumber);
 
+let myYoutube = "vishvadeep"
+
+let name = "my youtubename";
+
+let ojbct =  "dj"

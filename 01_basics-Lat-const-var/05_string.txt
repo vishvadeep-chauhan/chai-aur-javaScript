@@ -1,0 +1,195 @@
+
+### JavaScript String Methods with Examples
+
+1. **`charAt(index)`**
+   Returns the character at the specified index.
+   ```javascript
+   "Hello".charAt(1); // 'e'
+   ```
+
+2. **`charCodeAt(index)`**
+   Returns the Unicode value of the character at the specified index.
+   ```javascript
+   "ABC".charCodeAt(0); // 65
+   ```
+
+3. **`concat(str1, str2, ...)`**
+   Joins two or more strings.
+   ```javascript
+   "Hello".concat(" World"); // 'Hello World'
+   ```
+
+4. **`endsWith(searchString[, length])`**
+   Checks if the string ends with the given characters.
+   ```javascript
+   "JavaScript".endsWith("Script"); // true
+   ```
+
+5. **`startsWith(searchString[, length])`**
+   Checks if the string starts with the given characters.
+   ```javascript
+   "JavaScript".startsWith("Java"); // true
+   ```
+
+6. **`includes(searchString[, position])`**
+   Checks if the string contains the given substring.
+   ```javascript
+   "Learn JavaScript".includes("Java"); // true
+   ```
+
+7. **`indexOf(searchValue[, fromIndex])`**
+   Finds the first occurrence index of a value.
+   ```javascript
+   "banana".indexOf("a"); // 1
+   ```
+
+8. **`lastIndexOf(searchValue[, fromIndex])`**
+   Finds the last occurrence index of a value.
+   ```javascript
+   "banana".lastIndexOf("a"); // 5
+   ```
+
+9. **`padStart(targetLength, padString)`**
+   Pads the string from the start with another string.
+   ```javascript
+   "5".padStart(3, "0"); // '005'
+   ```
+
+10. **`padEnd(targetLength, padString)`**
+    Pads the string from the end with another string.
+    ```javascript
+    "5".padEnd(3, "0"); // '500'
+    ```
+
+11. **`repeat(count)`**
+    Repeats the string a given number of times.
+    ```javascript
+    "ha".repeat(3); // 'hahaha'
+    ```
+
+12. **`replace(searchValue, newValue)`**
+    Replaces the first occurrence of a substring.
+    ```javascript
+    "apple".replace("p", "b"); // 'abble'
+    ```
+
+13. **`replaceAll(searchValue, newValue)`**
+    Replaces all occurrences of a substring.
+    ```javascript
+    "apple pie".replaceAll("p", "b"); // 'abble bie'
+    ```
+
+14. **`slice(startIndex, endIndex)`**
+    Extracts a part of a string.
+    ```javascript
+    "JavaScript".slice(0, 4); // 'Java'
+    ```
+
+15. **`split(separator, limit)`**
+    Splits a string into an array of substrings.
+    ```javascript
+    "apple,banana,cherry".split(","); // ['apple', 'banana', 'cherry']
+    ```
+
+16. **`substring(startIndex, endIndex)`**
+    Extracts a substring between two indexes.
+    ```javascript
+    "JavaScript".substring(0, 4); // 'Java'
+    ```
+
+17. **`substr(startIndex, length)`** *(Deprecated)*
+    Extracts a substring starting at a specified index for a given length.
+    ```javascript
+    "JavaScript".substr(4, 6); // 'Script'
+    ```
+
+18. **`trim()`**
+    Removes whitespace from both ends of the string.
+    ```javascript
+    "  Hello World  ".trim(); // 'Hello World'
+    ```
+
+19. **`trimStart()` / `trimLeft()`**
+    Removes whitespace from the start of the string.
+    ```javascript
+    "  Hello".trimStart(); // 'Hello'
+    ```
+
+20. **`trimEnd()` / `trimRight()`**
+    Removes whitespace from the end of the string.
+    ```javascript
+    "Hello  ".trimEnd(); // 'Hello'
+    ```
+
+21. **`toLowerCase()`**
+    Converts the string to lowercase.
+    ```javascript
+    "HELLO".toLowerCase(); // 'hello'
+    ```
+
+22. **`toUpperCase()`**
+    Converts the string to uppercase.
+    ```javascript
+    "hello".toUpperCase(); // 'HELLO'
+    ```
+
+23. **`localeCompare(compareString)`**
+    Compares two strings based on locale.
+    ```javascript
+    "apple".localeCompare("banana"); // -1
+    ```
+
+24. **`at(index)`**
+    Returns the character at the specified index (supports negative indexes).
+    ```javascript
+    "hello".at(-1); // 'o'
+    ```
+
+25. **`codePointAt(index)`**
+    Returns the Unicode code point at the given index.
+    ```javascript
+    "🙂".codePointAt(0); // 128578
+    ```
+
+26. **`match(regexp)`**
+    Returns matches for a regular expression.
+    ```javascript
+    "apple pie".match(/p/g); // ['p', 'p']
+    ```
+
+27. **`matchAll(regexp)`**
+    Returns an iterator of all regex matches.
+    ```javascript
+    [...("apple pie".matchAll(/p/g))]; // [Array(1), Array(1)]
+    ```
+
+28. **`search(regexp)`**
+    Searches for a match using regex and returns the index.
+    ```javascript
+    "apple pie".search(/p/); // 1
+    ```
+
+29. **`fromCharCode(...codes)`**
+    Converts Unicode values to a string.
+    ```javascript
+    String.fromCharCode(65, 66, 67); // 'ABC'
+    ```
+
+30. **`fromCodePoint(...codePoints)`**
+    Converts code points to a string.
+    ```javascript
+    String.fromCodePoint(128578); // '🙂'
+    ```
+
+31. **`raw(template, ...substitutions)`**
+    Returns a raw string representation of a template literal.
+    ```javascript
+    String.raw`Hello\nWorld`; // 'Hello\nWorld'
+    ```
+
+---
+### Additional Notes:
+- Methods like **`replace`**, **`match`**, and **`search`** often work well with **regular expressions**.
+- Deprecated methods like **`substr`** should be avoided in favor of **`slice`** or **`substring`**.
+
+This list includes all essential string methods in JavaScript, explained briefly with examples.
