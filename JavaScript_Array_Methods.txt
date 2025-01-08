@@ -1,0 +1,191 @@
+
+JavaScript Array Methods
+
+1. Array.isArray()
+   Checks if a value is an array.
+   Example:
+   Array.isArray([1, 2, 3]); // true
+   Array.isArray("hello");  // false
+
+2. array.concat()
+   Merges two or more arrays.
+   Example:
+   const arr1 = [1, 2];
+   const arr2 = [3, 4];
+   const result = arr1.concat(arr2); // [1, 2, 3, 4]
+
+3. array.copyWithin()
+   Copies part of the array within the same array.
+   Example:
+   const arr = [1, 2, 3, 4, 5];
+   arr.copyWithin(0, 3); // [4, 5, 3, 4, 5]
+
+4. array.entries()
+   Returns an iterator with key/value pairs.
+   Example:
+   const arr = ["a", "b", "c"];
+   for (const [index, value] of arr.entries()) {
+       console.log(index, value);
+   }
+
+5. array.every()
+   Checks if all elements pass a condition.
+   Example:
+   const arr = [2, 4, 6];
+   const result = arr.every(num => num % 2 === 0); // true
+
+6. array.fill()
+   Fills an array with a static value.
+   Example:
+   const arr = [1, 2, 3];
+   arr.fill(0); // [0, 0, 0]
+
+7. array.filter()
+   Creates a new array with elements that pass a test.
+   Example:
+   const arr = [1, 2, 3, 4];
+   const result = arr.filter(num => num > 2); // [3, 4]
+
+8. array.find()
+   Returns the first element that satisfies a condition.
+   Example:
+   const arr = [1, 2, 3, 4];
+   const result = arr.find(num => num > 2); // 3
+
+9. array.findIndex()
+   Returns the index of the first element that satisfies a condition.
+   Example:
+   const arr = [1, 2, 3, 4];
+   const result = arr.findIndex(num => num > 2); // 2
+
+10. array.flat()
+    Flattens nested arrays.
+    Example:
+    const arr = [1, [2, 3], [4, 5]];
+    arr.flat(); // [1, 2, 3, 4, 5]
+
+11. array.flatMap()
+    Maps and flattens the array in one step.
+    Example:
+    const arr = [1, 2, 3];
+    const result = arr.flatMap(num => [num, num * 2]); // [1, 2, 2, 4, 3, 6]
+
+12. array.forEach()
+    Executes a function for each array element.
+    Example:
+    const arr = [1, 2, 3];
+    arr.forEach(num => console.log(num));
+
+13. array.includes()
+    Checks if an array contains a value.
+    Example:
+    const arr = [1, 2, 3];
+    arr.includes(2); // true
+
+14. array.indexOf()
+    Returns the first index of a value.
+    Example:
+    const arr = [1, 2, 3, 2];
+    arr.indexOf(2); // 1
+
+15. array.join()
+    Joins array elements into a string.
+    Example:
+    const arr = ["a", "b", "c"];
+    arr.join("-"); // "a-b-c"
+
+16. array.keys()
+    Returns an iterator for the keys of the array.
+    Example:
+    const arr = ["a", "b", "c"];
+    const iterator = arr.keys();
+    for (const key of iterator) {
+        console.log(key);
+    }
+
+17. array.lastIndexOf()
+    Returns the last index of a value.
+    Example:
+    const arr = [1, 2, 3, 2];
+    arr.lastIndexOf(2); // 3
+
+18. array.map()
+    Creates a new array by transforming each element.
+    Example:
+    const arr = [1, 2, 3];
+    const result = arr.map(num => num * 2); // [2, 4, 6]
+
+19. array.pop()
+    Removes and returns the last element.
+    Example:
+    const arr = [1, 2, 3];
+    arr.pop(); // 3
+
+20. array.push()
+    Adds elements to the end and returns the new length.
+    Example:
+    const arr = [1, 2, 3];
+    arr.push(4); // 4
+
+21. array.reduce()
+    Reduces the array to a single value by applying a function.
+    Example:
+    const arr = [1, 2, 3];
+    const sum = arr.reduce((acc, num) => acc + num, 0); // 6
+
+22. array.reverse()
+    Reverses the order of elements.
+    Example:
+    const arr = [1, 2, 3];
+    arr.reverse(); // [3, 2, 1]
+
+23. array.shift()
+    Removes and returns the first element.
+    Example:
+    const arr = [1, 2, 3];
+    arr.shift(); // 1
+
+24. array.slice()
+    Returns a portion of the array.
+    Example:
+    const arr = [1, 2, 3, 4];
+    const result = arr.slice(1, 3); // [2, 3]
+
+25. array.some()
+    Checks if any element passes a condition.
+    Example:
+    const arr = [1, 2, 3];
+    const result = arr.some(num => num > 2); // true
+
+26. array.sort()
+    Sorts the elements of an array.
+    Example:
+    const arr = [3, 1, 2];
+    arr.sort(); // [1, 2, 3]
+
+27. array.splice()
+    Adds/removes elements in the array.
+    Example:
+    const arr = [1, 2, 3];
+    arr.splice(1, 1); // [2] (removes the second element)
+
+28. array.toString()
+    Converts an array to a string.
+    Example:
+    const arr = [1, 2, 3];
+    arr.toString(); // "1,2,3"
+
+29. array.unshift()
+    Adds elements to the beginning and returns the new length.
+    Example:
+    const arr = [1, 2, 3];
+    arr.unshift(0); // 4
+
+30. array.values()
+    Returns an iterator for the values of the array.
+    Example:
+    const arr = ["a", "b", "c"];
+    const iterator = arr.values();
+    for (const value of iterator) {
+        console.log(value);
+    }
